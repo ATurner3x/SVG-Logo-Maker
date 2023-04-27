@@ -3,11 +3,29 @@ const inquirer = require('inquirer');
 
 //
 const SVG = require('svg.js');
-const svg = SVG(document.documentElement).size(300, 200);
+const svg = document.createElementNS("<http://www.w3.org/2000/svg>","svg");
+// Set the width and height of the <svg> element
+svg.setAttribute("width", "200");
+svg.setAttribute("height", "300");
+// Create a <rect> element
+const rect = document.createElementNS(
+  "<http://www.w3.org/2000/svg>",
+  "rect"
+);
+
+
+
 const circle = svg.circle(100).fill('#FF0000');
 const svgString = svg.svg();
 
+
+
+
+//LOGO REQUIREMENTS
 inquirer.prompt([
+
+  //Logo text
+
     {
       type: 'input',
       name: 'text',
@@ -19,18 +37,24 @@ inquirer.prompt([
         return true;
       },
     },
+    //Text color
+    
     {
       type: 'input',
       name: 'textColor',
       message: 'Enter a color keyword or hexadecimal number for the text:',
     },
+    //logo shape
+    
     {
       type: 'list',
       name: 'shape',
       message: 'Choose a shape:',
       choices: ['circle', 'triangle', 'square'],
     },
-    {
+   //shape color
+   
+   {
       type: 'input',
       name: 'shapeColor',
       message: 'Enter a color keyword or hexadecimal number for the shape:',
@@ -43,4 +67,10 @@ inquirer.prompt([
     console.error(error);
   });
 
-  
+  const fs = require('fs');
+
+fs.writeFileSync('logo.svg', svgString);
+console.log('Generated logo.svg');
+process.exit();
+
+

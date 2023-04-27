@@ -1,0 +1,26 @@
+{
+  "name": "10-logo-generator",
+  "version": "1.0.0",
+  "description": "SVG logo generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATurner3x/SVG-Logo-Maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATurner3x/SVG-Logo-Maker/issues"
+  },
+  "homepage": "https://github.com/ATurner3x/SVG-Logo-Maker#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "svg.js": "^2.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

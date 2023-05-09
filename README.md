@@ -3,7 +3,7 @@
 ## Description
 Generate your oen SVG logo in the terminal. Choose a shape , text , text color , and shape color.
 
-![Video Demonstration](./examples/2023-05-08%2021-02-56.mp4)
+![Video Demonstration](./examples/2023-05-08%2021-02-56.gif))
 
 
 ## Installation
